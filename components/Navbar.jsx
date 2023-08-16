@@ -2,11 +2,14 @@ import Home from "@/pages";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
+import { AiOutlineClose, AiOutlineMail, AiOutlineMenu } from "react-icons/ai";
+import { FaLinkedinIn } from "react-icons/fa";
+import { FaGithub} from "react-icons/fa";
+import { BsFillPersonLinesFill } from "react-icons/bs";
 
 const Navbar = () => {
 	return (
-		<div div className="fixed w-full h-20 shadow-xl z-[100]">
+		<div div className="fixed w-full h-20 shadow-xl  z-[100]">
 			<div className="flex justify-between w-full h-full px-2 2xl:px-16">
 				<Image
 					src="/../public/assets/navLogo.png"
@@ -58,8 +61,46 @@ const Navbar = () => {
 								width="87"
 								height="33"
 							/>
-							<div className="rounded-full shadow-lg shadow-gray-400 p-4 cursor-pointer">
+							<div className="rounded-full shadow-lg shadow-green-400 p-4 cursor-pointer">
 								<AiOutlineClose />
+							</div>
+						</div>
+						<div className="border-b border-green-300 my-4">
+							<p className="md:w-[90%]py-4">Let create something</p>
+						</div>
+					</div>
+					<div className="py-4 flex flex-col">
+						<ul className="uppercase">
+							<Link href="/">
+								<li className="py-4 text-sm">Home</li>
+							</Link>
+							<Link href="/">
+								<li className="py-4 text-sm">About</li>
+							</Link>
+							<Link href="/">
+								<li className="py-4 text-sm">Project</li>
+							</Link>
+							<Link href="/">
+								<li className="py-4 text-sm">Contact</li>
+							</Link>
+						</ul>
+						<div className="pt-40">
+							<p className="uppercase tracking-widest text-[#5651e5]">
+								oi oi fuckers{" "}
+							</p>
+							<div className="flex item-center justify-between my-4 sm:w-[80%]">
+								<div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor pointer  hover:scale-105 ease-in duration-300">
+									<FaLinkedinIn />
+								</div>
+								<div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor pointer  hover:scale-105 ease-in duration-300">
+									<FaGithub />
+								</div>
+								<div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor pointer  hover:scale-105 ease-in duration-300">
+									<AiOutlineMail />
+								</div>
+								<div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor pointer  hover:scale-105 ease-in duration-300">
+									<BsFillPersonLinesFill />
+								</div>
 							</div>
 						</div>
 					</div>
