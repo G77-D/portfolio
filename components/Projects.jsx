@@ -1,7 +1,10 @@
 import React from "react";
 import Image from "next/image";
-import propertyImg from "../public/assets/projects/property.jpg";
 import Link from "next/link";
+import propertyImg from "../public/assets/projects/property.jpg";
+import cryptoImg from "../public/assets/projects/crypto.jpg";
+import netflixImg from "../public/assets/projects/netflix.jpg";
+import gymImg from "../public/assets/projects/gym.png";
 import ProjectItems from "./ProjectItems";
 
 const Projects = () => {
@@ -13,7 +16,26 @@ const Projects = () => {
 				</p>
 				<h2 className="py-4">What I have built</h2>
 				<div className=" grid md:grid-cols-2 gap-8">
-					<ProjectItems title=" Project-Tile" backgroundImg= {propertyImg}/>
+					<ProjectItems
+						title="Project-Tile"
+						backgroundImg={propertyImg}
+						projectUrl="/property"
+					/>
+					<ProjectItems
+						title="Gym-Website"
+						backgroundImg={gymImg}
+						projectUrl="/property"
+					/>
+					<ProjectItems
+						title="Online-Shop"
+						backgroundImg={netflixImg}
+						projectUrl="/property"
+					/>
+					<ProjectItems
+						title="crypto App"
+						backgroundImg={cryptoImg}
+						projectUrl="/property"
+					/>
 				</div>
 			</div>
 		</div>
