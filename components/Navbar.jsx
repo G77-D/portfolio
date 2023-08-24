@@ -1,7 +1,7 @@
 import Home from "@/pages";
 import Image from "next/image";
 import Link from "next/link";
-import React,{useState}from "react";
+import React,{useState, useEffect}from "react";
 import { AiOutlineClose, AiOutlineMail, AiOutlineMenu } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
 import { FaGithub} from "react-icons/fa";
@@ -9,13 +9,27 @@ import { BsFillPersonLinesFill } from "react-icons/bs";
 
 const Navbar = () => {
 	const[nav,setNav]=useState(false)
-
+	const [shadow, setShadow] = useState(false);
 	const handleNav=()=>{
 		setNav(!nav)
 	}
 
+useEffect(() => {
+	const handleScroll = () => {
+		if (window.scrollY > 20) {
+			setShadow(true);
+		} else {
+			setShadow(false);
+		}
+	};
+	window.addEventListener("scroll", handleScroll);
+	return () => {
+		window.removeEventListener("scroll", handleScroll);
+	};
+}, []);
+
 	return (
-		<div div className="fixed w-full h-20 shadow-xl  z-[100]">
+		<div div className={shadow ? "fixed w-full h-20 shadow-xl  z-[100]" :"fixed w-full h-20  z-[100]"}>
 			<div className="flex justify-between w-full h-full px-2 2xl:px-16">
 				<Image
 					src="/../public/assets/navLogo.png"
@@ -30,22 +44,22 @@ const Navbar = () => {
 								Home
 							</li>
 						</Link>
-						<Link href="/">
+						<Link href="/#about">
 							<li className="ml-10 text-sm uppercase hover:border-b p-5">
 								About
 							</li>
-						</Link>
-						<Link href="/">
+						</Link>	
+					<Link href="/#skills">
 							<li className="ml-10 text-sm uppercase hover:border-b p-5">
 								Skills
 							</li>
 						</Link>
-						<Link href="/">
+						<Link href="/#projects">
 							<li className="ml-10 text-sm uppercase hover:border-b p-5">
 								Project
 							</li>
 						</Link>
-						<Link href="/">
+						<Link href="/#contact">
 							<li className="ml-10 text-sm uppercase hover:border-b p-5">
 								Contact
 							</li>
