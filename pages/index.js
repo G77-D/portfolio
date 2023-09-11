@@ -23,6 +23,7 @@ export default function Home() {
 			< Design/>
 			<Projects />
 			<Contact />
+
 		</div>
 	);
 }

@@ -29,7 +29,14 @@ useEffect(() => {
 }, []);
 
 	return (
-		<div div className={shadow ? "fixed w-full h-20 shadow-xl  z-[100]" :"fixed w-full h-20  z-[100]"}>
+		<div
+			div
+			className={
+				shadow
+					? "fixed w-full h-20 shadow-xl shadow-green-400  z-[100]"
+					: "fixed w-full h-20  z-[100]"
+			}
+		>
 			<div className="flex justify-between w-full h-full px-2 2xl:px-16">
 				<Image
 					src="/../public/assets/navLogo.png"
@@ -48,8 +55,8 @@ useEffect(() => {
 							<li className="ml-10 text-sm uppercase hover:border-b p-5">
 								About
 							</li>
-						</Link>	
-					<Link href="/#skills">
+						</Link>
+						<Link href="/#skills">
 							<li className="ml-10 text-sm uppercase hover:border-b p-5">
 								Skills
 							</li>
@@ -79,7 +86,7 @@ useEffect(() => {
 				<div
 					className={
 						nav
-							? " fixed left-0 top-0 w-[75%] sm:w-[60%] md:w-[45%] h-screen bg-[#ecf0f3] p-10 ease in duration-500"
+							? " fixed left-0 top-0 w-[75%] sm:w-[60%] md:w-[45%] h-screen bg-[#020201] p-10 ease in duration-500"
 							: "fixed left-[-100%] top-0 p-10 ease-in duration-500"
 					}
 				>
@@ -118,20 +125,20 @@ useEffect(() => {
 							</Link>
 						</ul>
 						<div className="pt-40">
-							<p className="uppercase tracking-widest text-[#5651e5]">
+							<p className="uppercase tracking-widest text-[#7be551]">
 								oi oi fuckers{" "}
 							</p>
 							<div className="flex item-center justify-between my-4 sm:w-[80%]">
-								<div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor pointer  hover:scale-105 ease-in duration-300">
+								<div className="rounded-full shadow-lg shadow- shadow-green-400 p-3 cursor pointer  hover:scale-105 ease-in duration-300">
 									<FaLinkedinIn />
 								</div>
-								<div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor pointer  hover:scale-105 ease-in duration-300">
+								<div className="rounded-full shadow-lg shadow- shadow-green-400 p-3 cursor pointer  hover:scale-105 ease-in duration-300">
 									<FaGithub />
 								</div>
-								<div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor pointer  hover:scale-105 ease-in duration-300">
+								<div className="rounded-full shadow-lg shadow- shadow-green-400 p-3 cursor pointer  hover:scale-105 ease-in duration-300">
 									<AiOutlineMail />
 								</div>
-								<div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor pointer  hover:scale-105 ease-in duration-300">
+								<div className="rounded-full shadow-lg shadow- shadow-green-400 p-3 cursor pointer  hover:scale-105 ease-in duration-300">
 									<BsFillPersonLinesFill />
 								</div>
 							</div>
